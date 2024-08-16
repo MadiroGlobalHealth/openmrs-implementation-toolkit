@@ -13,6 +13,7 @@
   * [Branding](configuration/user-interface/branding.md)
 * [Features](configuration/features/README.md)
   * [Locations](configuration/features/locations.md)
+  * [Locations](configuration/features/locations-1.md)
   * [Registration](configuration/features/registration.md)
   * [Appointments](configuration/features/appointments.md)
   * [Queues](configuration/features/queues.md)
