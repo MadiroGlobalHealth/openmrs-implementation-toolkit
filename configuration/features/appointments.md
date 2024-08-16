@@ -6,7 +6,13 @@ description: >-
 
 # Appointments
 
-## Appointments in OpenMRS 3: Configuration Guide
+<div data-full-width="true">
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-08-16 at 10.13.22 AM.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+## Configuration Guide
 
 OpenMRS 3 uses **Appointments** to efficiently manage and schedule patient visits, ensuring that patients are seen by the right providers at the right time. Appointments are linked to specific services, providers, and locations within the system, making them essential for streamlined patient flow and optimal resource allocation.
 
@@ -39,38 +45,10 @@ The typical appointment workflow in OpenMRS 3 includes:
 3. **Encounter Management**: Managing the clinical encounter associated with the appointment.
 4. **Follow-Up**: Scheduling follow-up appointments or actions as needed.
 
-### Configuring Appointments via Admin UI
 
-The Admin UI provides an intuitive interface for managing appointments, including setting up services, service types, and provider availability.
 
-#### Steps to Configure Appointments via Admin UI
-
-1. **Access the Admin UI:**
-   * Log in to your OpenMRS instance.
-   * Navigate to the **System Administration** section.
-   * Click on **Manage Appointments**.
-2. **Configure Appointment Services:**
-   * **Appointment Services** define the different types of appointments available in the system, such as general consultations, lab tests, or specialist visits.
-   * To create a new service:
-     * Click **Add Service**.
-     * Fill in the required fields, such as **Name**, **Description**, and **Duration** (default time slot for appointments of this service).
-     * Click **Save** to create the service.
-3. **Configure Service Types:**
-   * **Service Types** are subcategories within a service. For example, within a "Consultation" service, you might have "Initial Consultation" and "Follow-up Consultation" as service types.
-   * To add a new service type:
-     * Click **Add Service Type** within the desired service.
-     * Specify the name, description, and default duration for this service type.
-     * Click **Save**.
-4. **Set Provider Availability:**
-   * Provider availability is crucial for ensuring that appointments are scheduled when the provider is available.
-   * To set provider availability:
-     * Go to **Manage Provider Availability**.
-     * Select the provider and define their available time slots, days, and locations.
-     * Save the availability settings.
-5. **View and Manage Appointments:**
-   * Use the **Appointments Dashboard** to view, edit, or cancel scheduled appointments.
-   * You can filter appointments by date, service, provider, and location to manage your schedule efficiently.
-
+{% tabs %}
+{% tab title="Configuring via the Initializer Module" %}
 ### Configuring Appointments via the Initializer Module
 
 For organizations looking to automate their appointment configurations, the Initializer module provides a way to set up appointments using configuration files. This is useful for bulk setups or consistent configurations across multiple environments.
@@ -112,6 +90,42 @@ For organizations looking to automate their appointment configurations, the Init
    * The Initializer module will automatically process the files and configure the appointment services and provider availability upon the next startup or manual trigger of the module.
 5. **Verify the Configuration:**
    * Once the configuration has been applied, log in to OpenMRS and navigate to the **Manage Appointments** section to verify that your services, service types, and provider availabilities were created successfully.
+{% endtab %}
+
+{% tab title="Configuring via Admin UI" %}
+### Configuring Appointments via Admin UI
+
+The Admin UI provides an intuitive interface for managing appointments, including setting up services, service types, and provider availability.
+
+#### Steps to Configure Appointments via Admin UI
+
+1. **Access the Admin UI:**
+   * Log in to your OpenMRS instance.
+   * Navigate to the **System Administration** section.
+   * Click on **Manage Appointments**.
+2. **Configure Appointment Services:**
+   * **Appointment Services** define the different types of appointments available in the system, such as general consultations, lab tests, or specialist visits.
+   * To create a new service:
+     * Click **Add Service**.
+     * Fill in the required fields, such as **Name**, **Description**, and **Duration** (default time slot for appointments of this service).
+     * Click **Save** to create the service.
+3. **Configure Service Types:**
+   * **Service Types** are subcategories within a service. For example, within a "Consultation" service, you might have "Initial Consultation" and "Follow-up Consultation" as service types.
+   * To add a new service type:
+     * Click **Add Service Type** within the desired service.
+     * Specify the name, description, and default duration for this service type.
+     * Click **Save**.
+4. **Set Provider Availability:**
+   * Provider availability is crucial for ensuring that appointments are scheduled when the provider is available.
+   * To set provider availability:
+     * Go to **Manage Provider Availability**.
+     * Select the provider and define their available time slots, days, and locations.
+     * Save the availability settings.
+5. **View and Manage Appointments:**
+   * Use the **Appointments Dashboard** to view, edit, or cancel scheduled appointments.
+   * You can filter appointments by date, service, provider, and location to manage your schedule efficiently.
+{% endtab %}
+{% endtabs %}
 
 ### Best Practices for Appointment Configuration
 

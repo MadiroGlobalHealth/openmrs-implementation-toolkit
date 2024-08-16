@@ -43,40 +43,8 @@ Locations in OpenMRS serve several key functions:
 
 In OpenMRS 3, locations are hierarchical, meaning that you can create parent-child relationships between locations (e.g., a hospital contains multiple departments, each with wards).
 
-### Configuring Locations via Admin UI
-
-The Admin UI provides a user-friendly interface to create and manage locations in OpenMRS 3.
-
-<div data-full-width="true">
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-08-16 at 9.55.27 AM.png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
-#### Steps to Configure Locations via Admin UI
-
-1. **Access the Admin UI:**
-   * Log in to your OpenMRS instance.
-   * Navigate to the **System Administration** section.
-   * Click on **Manage Locations**.
-2. **Create a New Location:**
-   * Click the **Add Location** button.
-   * Fill in the required fields, including:
-     * **Name**: The name of the location (e.g., "General Ward").
-     * **Description**: A brief description of the location’s purpose.
-     * **Parent Location**: If this location is part of a hierarchy, select the parent location.
-     * **Tags**: You can optionally assign tags to help categorize and filter locations.
-   * Click **Save** to create the location.
-3. **Edit an Existing Location:**
-   * From the **Manage Locations** page, click the **Edit** icon next to the location you wish to modify.
-   * Update the location details as needed and click **Save**.
-4. **Remove a Location:**
-   * To remove a location, click the **Delete** icon next to the location. Note that locations tied to existing data (e.g., encounters) cannot be deleted without first reassigning or removing those associations.
-
-#### Location Attributes
-
-* You can also configure custom attributes for locations through the Admin UI. For instance, you might want to track details like room capacity or facility type. These attributes can be added by clicking on **Manage Location Attributes** under the System Administration section.
-
+{% tabs %}
+{% tab title="Configuring via the Initializer Module" %}
 ### Configuring Locations via the Initializer Module
 
 The Initializer module provides a powerful way to configure locations using configuration files. This method is particularly useful for automating deployments or setting up locations programmatically.
@@ -117,6 +85,44 @@ The Initializer module provides a powerful way to configure locations using conf
    * The Initializer module will automatically process the configuration file and create or update the locations upon the next startup or manual trigger of the module.
 4. **Verify the Configuration:**
    * Once the configuration has been applied, log in to OpenMRS and navigate to the **Manage Locations** page to verify that your locations were created successfully.
+{% endtab %}
+
+{% tab title="Configuring via Admin UI" %}
+### Configuring Locations via Admin UI
+
+The Admin UI provides a user-friendly interface to create and manage locations in OpenMRS 3.
+
+<div data-full-width="true">
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-08-16 at 9.55.27 AM.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+#### Steps to Configure Locations via Admin UI
+
+1. **Access the Admin UI:**
+   * Log in to your OpenMRS instance.
+   * Navigate to the **System Administration** section.
+   * Click on **Manage Locations**.
+2. **Create a New Location:**
+   * Click the **Add Location** button.
+   * Fill in the required fields, including:
+     * **Name**: The name of the location (e.g., "General Ward").
+     * **Description**: A brief description of the location’s purpose.
+     * **Parent Location**: If this location is part of a hierarchy, select the parent location.
+     * **Tags**: You can optionally assign tags to help categorize and filter locations.
+   * Click **Save** to create the location.
+3. **Edit an Existing Location:**
+   * From the **Manage Locations** page, click the **Edit** icon next to the location you wish to modify.
+   * Update the location details as needed and click **Save**.
+4. **Remove a Location:**
+   * To remove a location, click the **Delete** icon next to the location. Note that locations tied to existing data (e.g., encounters) cannot be deleted without first reassigning or removing those associations.
+
+#### Location Attributes
+
+* You can also configure custom attributes for locations through the Admin UI. For instance, you might want to track details like room capacity or facility type. These attributes can be added by clicking on **Manage Location Attributes** under the System Administration section.
+{% endtab %}
+{% endtabs %}
 
 ### Best Practices for Location Configuration
 
