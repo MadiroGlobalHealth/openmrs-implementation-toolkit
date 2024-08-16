@@ -1,7 +1,7 @@
 ---
 description: >-
-  This documentation will guide you through how locations are used in OpenMRS 3
-  and how to configure them via the Admin UI or the Initializer module.
+  This page will guide you through how locations are used in OpenMRS 3 and how
+  to configure them via the Admin UI or the Initializer module.
 ---
 
 # Locations
