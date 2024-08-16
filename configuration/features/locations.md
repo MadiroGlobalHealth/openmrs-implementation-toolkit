@@ -102,11 +102,16 @@ The Initializer module provides a powerful way to configure locations using conf
 
     Example CSV content:
 
+    {% code overflow="wrap" fullWidth="true" %}
     ```csv
-    name,description,parentLocation,tags,uuid
-    General Ward,Main ward for general patients,Hospitals,WARD,uuid-of-general-ward
-    Outpatient Clinic,Clinic for outpatients,Hospitals,CLINIC,uuid-of-outpatient-clinic
+    Uuid,Void/Retire,Name,Description,Parent,Tags,Tag|Facility Location,Tag|Queue Location,Attribute|9eca4f4e-707f-4bb8-8289-2f9b6e93803c,Attribute|Last Audit Date,Address 1,Address 2,Address 3,Address 4,Address 5,Address 6,City/Village,County/District,State/Province,Postal Code,Country,_order:1000
+    8d6c993e-c2cc-11de-8d13-0010c6dffd0f,,Unknown Location,Unknown Location,,,,,,,,,,,,,,,,,,
+    44c3efb0-2583-4c80-a79e-1f756a03c0a1,,Outpatient Clinic,Outpatient Clinic,,Login Location,TRUE,TRUE,,,,,,,,,,,,,,
+    ba685651-ed3b-4e63-9b35-78893060758a,,Inpatient Ward,Inpatient Ward,,Login Location,,,,,,,,,,,,,,,,
+    8d9045ad-50f0-45b8-93c8-3ed4bce19dbf,,Mobile Clinic,Mobile Clinic,,Login Location,,,,,,,,,,,,,,,,
+    1ce1b7d4-c865-4178-82b0-5932e51503d6,,Community Outreach,Community Outreach,,Login Location,,,,,,,,,,,,,,,,
     ```
+    {% endcode %}
 3. **Upload the Configuration File:**
    * Place the CSV file in the appropriate directory within the Initializer module’s configuration folder, typically found under `configuration/domain/locations`.
    * The Initializer module will automatically process the configuration file and create or update the locations upon the next startup or manual trigger of the module.
